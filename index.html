@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voltando ao aplicativo…</title>
+  <style>
+    body {
+      background-color: #0d1117;
+      color: #fff;
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 30vh;
+    }
+  </style>
+  <script>
+    // Obtém o fragmento da URL após o #
+    const hash = window.location.hash; // Ex: #access_token=...&token_type=Bearer
+
+    // Esquema do seu app (substitua "myapp" pelo nome real do seu scheme)
+    const appScheme = "myapp://";
+
+    // Tenta abrir o app com os dados do OAuth
+    window.location = appScheme + (hash || "");
+
+    // Se o app não abrir em 1.5 segundos, redireciona para uma página alternativa
+    setTimeout(() => {
+      // Aqui você pode mandar para sua página da loja ou um aviso
+      window.location.href = "https://github.com/seuUsuario"; 
+    }, 1500);
+  </script>
+</head>
+<body>
+  <h2>Voltando ao aplicativo…</h2>
+  <p>Se o app não abrir automaticamente, <a href="myapp://">toque aqui</a>.</p>
+</body>
+</html>
