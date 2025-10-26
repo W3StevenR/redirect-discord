@@ -18,7 +18,7 @@
     const hash = window.location.hash; // Ex: #access_token=...&token_type=Bearer
 
     // Esquema do seu app (substitua "myapp" pelo nome real do seu scheme)
-    const appScheme = "myapp://";
+    const appScheme = "gameplay://";
 
     // Tenta abrir o app com os dados do OAuth
     window.location = appScheme + (hash || "");
@@ -32,6 +32,7 @@
 </head>
 <body>
   <h2>Voltando ao aplicativo…</h2>
-  <p>Se o app não abrir automaticamente, <a href="myapp://">toque aqui</a>.</p>
+  <p>Se o app não abrir automaticamente, <a href="gameplay://">toque aqui</a>.</p>
 </body>
 </html>
+
